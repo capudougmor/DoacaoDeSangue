@@ -50,11 +50,6 @@ server.get("/", (req, res) =>{
     donors.findAll({order: [['id', 'DESC']]}).then(function(donors){
         res.render('index.html', {donors: donors});
     })
-    // donors.findAll("SELECT * FROM donors", function(err, result){
-    //     if (err) return res.send("Erro na apresentaçãos dos dados!")
-    //     const donors = result.rows
-    //     return res.render("index.html", { donors: donors })
-    // })
 }) 
 
 server.post('/', function(req, res){

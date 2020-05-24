@@ -113,12 +113,15 @@ form input::placeholder {
 }
 
 section.donors {
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
 }
 
 .blood {
+    
+    margin-top: 32px;
     color: #ff4f4f;
     font-weight: bolder;
     font-size: 12px;
