@@ -11,15 +11,27 @@ server.use(express.urlencoded({
 }))
 
 //configurar a conexao com o banco de dados
-const Pool = require('pg').Pool
-const db = new Pool ({
-    user: "postgres",
-    password: '@AnaClara021184',
-    host: 'localhost',
-    port: '5432',
-    database: 'doadores'
+// const sqlite = require('sqlite3').verbose()
+// var db = sqlite.Database('./donors.sqlite', (err) =>{
+//     if(err){
+//         console.log('Erro ao conectar no banco de dado: ' +err)
+//     }
+//     console.log('Conectado ao banco de dados')
+//     db.close()
+// })
 
-})
+const Sequelize = require('sequelize')
+const sequelize = new Sequelize({
+    dialect: 'sqlite',
+    storage: './donors.sqlite'
+  });
+
+  try {
+    sequelize.authenticate();
+    console.log('Connection has been established successfully.');
+  } catch (error) {
+    console.error('Unable to connect to the database:', error);
+  }
 
 // configurando a template engine
 const nunjucks = require("nunjucks")
