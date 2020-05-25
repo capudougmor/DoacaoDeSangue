@@ -65,14 +65,11 @@ server.post('/', function(req, res){
     
     donors.create({name, email, blood}).then(function(){
         res.redirect('/')
-        //res.send("donors cadastro com sucesso!")
     }).catch(function(erro){
         res.send("Erro: donors não foi cadastrado com sucesso!" + erro)
     })
-    //res.send("Nome: " + req.body.nome + "<br>Valor: " + req.body.valor + "<br>") 
 })
 
-// ligar a sevidor e permitir o acesso a porta 3000
 server.listen(3000, function() {
-    console.log("iniciei o servidor com nodemon")
+    console.log("iniciei o servidor na porta 3000")
 })
