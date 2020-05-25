@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-  <img src="https://ibb.co/DrdY278" alt="Logo doe" width="120">
+  <img src="https://i.ibb.co/cYqwnNC/logo.png" alt="Logo doe" width="120">
 <br>
 <br>
 Doe Sangue
